@@ -1,23 +1,14 @@
-function combine(input1, input2, resultConversion) {
-    var result;
-    if (typeof input1 === 'number' && typeof input2 === 'number' || resultConversion === 'as-number') {
-        result = +input1 + +input2;
-    }
-    else {
-        result = input1.toString() + input2.toString();
-    }
-    return result;
-    // if (resultConversion === 'as-number') {
-    // 	return +(result);
-    // } else { 
-    // 	return result.toString();
-    // }
+function add(n1, n2) {
+    return n1 + n2;
 }
-;
-var combineAges = combine(30, 26, 'as-number');
-console.log(combineAges);
-var combineStringAges = combine('30', '26', 'as-number');
-console.log(combineStringAges);
-var combinedNames = combine('Max', 'Anna', 'as-text');
-console.log(combinedNames);
-// union type can help with either number or string 
+// the :number at the end of the function describes
+// the return type of the function's value
+// this determines that the result and return type of 
+// this function will be a number type
+function printResult(num) {
+    console.log('Result: ' + num);
+    // we are not returning anything 
+    // so the return type is void
+    // javascript doesn't have a name for this
+}
+console.log(printResult(add(5, 12)));
